@@ -20,16 +20,16 @@ class StdOutListener( StreamListener ):
 		global response
 		reqUrl='https://api.alovestorygame.com/us/reg'
 		postHeaders={
-            'Accept':'*/*',
-            'Accept-Encoding':'gzip, deflate, br',
-            'Accept-Language':'en-US,en;q=0.8',
-            'Connection':'keep-alive',
-            'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8',
-            'Host':'api.alovestorygame.com',
-            'Origin':'https://www.alovestorygame.com',
-            'Referer':'https://www.alovestorygame.com/',
-            'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36'
-        }
+                    'Accept':'*/*',
+                    'Accept-Encoding':'gzip, deflate, br',
+                    'Accept-Language':'en-US,en;q=0.8',
+                    'Connection':'keep-alive',
+                    'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8',
+                    'Host':'api.alovestorygame.com',
+                    'Origin':'https://www.alovestorygame.com',
+                    'Referer':'https://www.alovestorygame.com/',
+                    'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36'
+                }
 
 		payload={"f":f,"l":l,"m":m,"s":"false","z":z,"e":e}
 		session=requests.Session()
@@ -65,7 +65,7 @@ class StdOutListener( StreamListener ):
 					last=message.split(' ')[1]
 					mobile=message.split(' ')[2]
 					zipCode=message.split(' ')[3]
-                    email=message.split(' ')[4]
+                		        email=message.split(' ')[4]
 					self.bogo(first,last,mobile,zipCode,email)
 					print '\n'
 				else:
